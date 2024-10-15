@@ -1,0 +1,3 @@
+interface AddItemButtonProps {
+  id: number;
+}

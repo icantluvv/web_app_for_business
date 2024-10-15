@@ -1,0 +1,27 @@
+{
+  "authPage": {
+    "AuthHello": "Добро пожаловать",
+    "Maestri": "в Maestri",
+    "Continue": "Продолжить с помощью"
+  },
+
+  "ButtonsChoosePages": {
+    "registrations": "Записи",
+    "services": "Услуги",
+    "finance": "Финансы",
+    "masters": "Мастера",
+    "clients": "Клиенты",
+    "tasks": "Задачи",
+    "positions": "Должности",
+    "stats": "Статистика"
+  },
+  "SearchingWidget": "Начните поиск...",
+  "SideBarsRegistrations": {
+    "AllMasters": {
+      "title": "Все мастера",
+      "params": "Выбрать все"
+    },
+    "Options": "Параметры",
+    "Calendar": "Календарь"
+  }
+}

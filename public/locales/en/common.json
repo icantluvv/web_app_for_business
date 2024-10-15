@@ -1,0 +1,26 @@
+{
+  "authPage": {
+    "AuthHello": "Welcome",
+    "Maestri": "to Maestri",
+    "Continue": "Continue with"
+  },
+  "ButtonsChoosePages": {
+    "registrations": "Registrations",
+    "services": "Services",
+    "finance": "Finance",
+    "masters": "Masters",
+    "clients": "Clients",
+    "tasks": "Tasks",
+    "positions": "Positions",
+    "stats": "Statistics"
+  },
+  "SearchingWidget": "Start searching...",
+  "SideBarsRegistrations": {
+    "AllMasters": {
+      "title": "All masters",
+      "params": "Pick all"
+    },
+    "Options": "Options",
+    "Calendar": "Calendar"
+  }
+}
