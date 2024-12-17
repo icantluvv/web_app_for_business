@@ -1,22 +1,40 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react"
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import { useRouter, useParams } from "next/navigation";
+import { useSelector, useDispatch } from "react-redux";
 import { selectPage } from "@/redux/SelectPageSlice";
 
 const WorkShopButton = () => {
   const router = useRouter();
+  const params = useParams();
   const dispatch = useDispatch();
 
-  const SelectedSalon = useSelector(
-    (state: any) => state.channel.selectedChannelId
-  );
-  const ChannelData = useSelector((state: any) => state.channel.channelData);
+  const channels = JSON.parse(localStorage.getItem("channels") || "");
+
+  const [ChannelData, setChannelData] = useState(channels.find((channel: any) => channel.id === params.id))
   const SelectedPageID = useSelector((state: any) => state.page.selectedPageId);
 
+  const SelectedSalon = ChannelData?.id;
   const isSelected = SelectedPageID;
+
+  useEffect(() => {
+    if (params.id && params.id !== ChannelData?.id) {
+      try {
+        const storedChannels = localStorage.getItem("channels");
+        if (storedChannels) {
+          const channels = JSON.parse(storedChannels);
+          const currentChannel = channels.find((channel: any) => channel.id === params.id);
+
+          if (currentChannel) {
+            setChannelData(currentChannel);
+          }
+        }
+      } catch (error) {
+        console.error("Error updating channel data:", error);
+      }
+    }
+  }, [params.id, dispatch, ChannelData?.id]);
 
   function clickWorkShopButton() {
     if (!isSelected) {

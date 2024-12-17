@@ -5,6 +5,7 @@
     "Continue": "Continue with"
   },
   "ButtonsChoosePages": {
+    "Salon": "Salon info",
     "registrations": "Registrations",
     "services": "Services",
     "finance": "Finance",
@@ -22,5 +23,29 @@
     },
     "Options": "Options",
     "Calendar": "Calendar"
+  },
+  "OrganizationPage": {
+    "ChangeButton": "Change",
+    "InformationAbout": "Information about salon",
+    "Disable": "Disable salon",
+    "Stop": "Stop salon active",
+    "DisableButton": "Disable",
+    "DeleteSalon": "Delete salon",
+    "ActionIrreversible": "Action is irreversible",
+    "DeleteButton": "Delete",
+    "Address": "Address",
+    "TimeTable": {
+      "Title": "Work time",
+      "Weekday": {
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday",
+        "none": "None"
+      }
+    }
   }
 }

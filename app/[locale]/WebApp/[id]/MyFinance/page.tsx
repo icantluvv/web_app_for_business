@@ -1,13 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import TitlePage from "@/components/TitlePage/TitlePage";
-// import StatsContainer from "@/app/WebApp/[id]/MyFinance/components/StatsContainer";
 import backgroundImage from "@/public/assets/images/bg-gradient.svg";
 import ChooseButton from "./components/ChooseMoneyButton/ChooseMoneyButton";
 import ActionButton from "./components/ActionButton";
 
 const MyFinance = () => (
-  <main className="w-[74%] flex flex-col relative bg-[#f9f9f9]">
+  <main className="w-[76%]  flex flex-col relative bg-[#f9f9f9]">
     <div className="absolute w-full top-0 right-0 z-[0]">
       <Image src={backgroundImage} width={1520} height={1080} alt={""}></Image>
     </div>
@@ -56,6 +55,6 @@ const MyFinance = () => (
       {/* <StatsContainer></StatsContainer> */}
     </section>
   </main>
-);
+)
 
 export default MyFinance;

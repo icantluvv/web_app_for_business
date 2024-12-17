@@ -14,7 +14,8 @@ const config: Config = {
         lightBlue: "#F2F7FC",
         lightGray: "#e6e6e6",
         darkBlue: "#2A2A34",
-        moneyGreen: "#6BA034"
+        moneyGreen: "#6BA034",
+        textBlue: "#428BF9"
       }
     }
   },

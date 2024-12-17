@@ -2,12 +2,6 @@ import React from "react";
 import CurrentTimeLine from "./RedTimeLine";
 import Registration from "./Registration";
 
-interface event {
-  start: number;
-  end: number;
-  title: string;
-}
-
 const AllRegistrationsTimeLine = ({ endHour, startHour, Person }: any) => {
   const columns = 5;
   const hourRange = endHour - startHour;

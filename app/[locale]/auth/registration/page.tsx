@@ -1,6 +1,6 @@
 import React from "react";
-import InputBoxMessage from "@/app/auth/components/register/InputBoxMessage";
-import MessageFabric from "@/app/auth/components/register/MessageFabric";
+import InputBoxMessage from "@/app/[locale]/auth/components/register/InputBoxMessage";
+import MessageFabric from "@/app/[locale]/auth/components/register/MessageFabric";
 
 const RegistrationPage = () => {
   return (

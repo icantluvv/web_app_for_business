@@ -7,7 +7,7 @@ import AddItemButton from "@/components/AddItemButton/AddItemButton"
 
 const MyServices = async ({ params }: { params: { id: string } }) => {
   return (
-    <main className="w-[74%] h-screen flex flex-col relative bg-[#f9f9f9]">
+    <main className="w-[76%] h-screen flex flex-col relative bg-[#f9f9f9]">
       <div className="absolute w-full top-0 right-0 z-[0]">
         <Image
           src={backgroundImage}

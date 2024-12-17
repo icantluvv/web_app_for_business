@@ -1,32 +1,39 @@
-import React from "react";
-import OneChannel from "./ChannelButton";
-import { GetWorkShops } from "@/services/getAllWorkShops";
-import SkeletonLeftSidePanel from "./SkeletonLeftSidePanel";
-import { redirect } from "next/navigation";
+import React from "react"
+import OneChannel from "./ChannelButton"
+import { GetWorkShops } from "@/services/getAllWorkShops"
+import SkeletonLeftSidePanel from "./SkeletonLeftSidePanel"
+import { redirect } from "next/navigation"
+import ClientWrapper from "./../ClientWrapper"
 
 const ContainerChannels = async () => {
-  const response = await GetWorkShops();
+  const response = await GetWorkShops()
 
   if (response.redirect) {
-    redirect(response.redirect);
+    redirect(response.redirect)
   }
-  const { error, data } = response;
+  const { error, data } = response
 
   if (error || !data) {
-    return <SkeletonLeftSidePanel />;
+    return <SkeletonLeftSidePanel />
   }
 
   return (
-    <section className="flex flex-col w-full max-h-[395px] gap-y-2 no-scrollbar overflow-y-auto items-center">
-      {data.length > 0 ? (
-        data.map((channel: any, index: number) => (
-          <OneChannel data={channel} index={index} key={index || channel.id} />
-        ))
-      ) : (
-        <div>No channels available</div>
-      )}
-    </section>
-  );
-};
+    <ClientWrapper initialChannels={data}>
+      <section className="flex flex-col w-full gap-y-2 no-scrollbar items-center">
+        {data.length > 0 ? (
+          data.map((channel: any, index: number) => (
+            <OneChannel
+              data={channel}
+              index={index}
+              key={index || channel.id}
+            />
+          ))
+        ) : (
+          <div>No channels available</div>
+        )}
+      </section>
+    </ClientWrapper>
+  )
+}
 
-export default ContainerChannels;
+export default ContainerChannels

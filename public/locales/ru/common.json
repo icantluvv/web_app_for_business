@@ -4,8 +4,8 @@
     "Maestri": "в Maestri",
     "Continue": "Продолжить с помощью"
   },
-
   "ButtonsChoosePages": {
+    "Salon": "О салоне",
     "registrations": "Записи",
     "services": "Услуги",
     "finance": "Финансы",
@@ -23,5 +23,29 @@
     },
     "Options": "Параметры",
     "Calendar": "Календарь"
+  },
+  "OrganizationPage": {
+    "ChangeButton": "Изменить",
+    "InformationAbout": "Information about salon",
+    "Disable": "Отключить салон",
+    "Stop": "Остановить работу салона",
+    "DisableButton": "Отключить",
+    "DeleteSalon": "Удалить салон",
+    "ActionIrreversible": "Это действие необратимо",
+    "DeleteButton": "Удалить",
+    "Address": "Адрес",
+    "TimeTable": {
+      "Title": "Рабочее время",
+      "Weekday": {
+        "monday": "Понедельник",
+        "tuesday": "Вторник",
+        "wednesday": "Среда",
+        "thursday": "Четверг",
+        "friday": "Пятница",
+        "saturday": "Суббота",
+        "sunday": "Воскресенье",
+        "none": "Нет"
+      }
+    }
   }
 }

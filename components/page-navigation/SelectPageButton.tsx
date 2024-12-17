@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import { useSelector } from "react-redux";
 import { selectPage } from "@/redux/SelectPageSlice";
 import { useDispatch } from "react-redux";
@@ -8,10 +8,9 @@ import { useDispatch } from "react-redux";
 const SelectPageButton = ({ title, address, isLast, index }: any) => {
   const router = useRouter();
   const dispatch = useDispatch();
+  const params = useParams();
 
-  const selectedChannelId = useSelector(
-    (state: any) => state.channel.selectedChannelId
-  );
+  const selectedChannelId = params.id;
 
   const selectedPage = useSelector((state: any) => state.page.selectedPageId);
 
